@@ -20,15 +20,20 @@ public:
 	Counter operator ++()
 	{
 		
-		++count;
-		return Counter(count);
+		//++count;
+		return Counter(++count);
 
+	}
+	Counter operator ++(int)//suffix increment
+	{
+	
+		return Counter(count++);
 	}
 
 };
 int main()
 {
-	Counter c1, c2, c3;
+	Counter c1, c2, c3,c4;
 	cout << "c1 = " << c1.getCount() << endl;
 	cout << "c2 = " << c2.getCount() << endl;
 	++c1;
@@ -39,6 +44,10 @@ int main()
 	cout << "c2 = " << c2.getCount() << endl;
 	c3 = ++c2;
 	cout << "c3 = " << c3.getCount() << endl;
+	c4 = c1++;
+	cout << "c1 = " << c1.getCount() << endl;
+	cout << "c4 = " << c4.getCount() << endl;
+
 
 
 
