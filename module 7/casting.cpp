@@ -75,6 +75,7 @@ int main()
 	Distance d1;//1st constructor
 	Distance d2(11);//second construtor
 	Distance d3(22, 2.1);//third
+	float mtrs;
 	cout << "Distance " << endl;
 	d1.showDist();
 	d1 = d1 + d2;
@@ -83,6 +84,7 @@ int main()
 	d2 += d3;
 	cout << "Distance " << endl;
 	d2.showDist();
+	mtrs = static_cast<float>(d2);
 
 
 
